@@ -1,0 +1,29 @@
+.wrapper {
+  list-style: none;
+  border: 1px solid grey;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.active {
+  background-color: #dcdcdc;
+}
+
+.noResults {
+  border: 1px solid grey;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listRow {
+  cursor: pointer;
+  padding: 0.7rem;
+
+  &:hover {
+    background-color: #f2f2f2;
+  }
+}
