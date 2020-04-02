@@ -63,7 +63,7 @@ export const Autocomplete = () => {
   const renderSuggestions = () => {
     return (
       <div data-testid="suggestionsWrapper" className={styles.suggestionsWrapper}>
-        <Suggestions onClick={handleSelect} active={active} list={results} />
+        <Suggestions onClick={handleSelect} text={text} active={active} list={results} />
       </div>
     );
   };

@@ -1,14 +1,11 @@
 import React from 'react';
 import {
   fireEvent,
-  findByText,
   render,
   waitForElement,
-  waitForDomChange,
 } from '@testing-library/react';
 import { Autocomplete } from './Autocomplete';
 import { AutocompleteApi } from '../api/AutocompleteApi';
-import { prettyDOM, waitForElementToBeRemoved } from '@testing-library/dom';
 
 jest.mock('../api/AutocompleteApi');
 
@@ -51,6 +48,7 @@ describe('Autocomplete', () => {
     const input = getByPlaceholderText(/start typing/i);
 
     fireEvent.change(input, { target: { value: 'a' } });
+
     await waitForElement(() => getByTestId('suggestionsWrapper'));
 
     expect(input.value).toBe('a');
