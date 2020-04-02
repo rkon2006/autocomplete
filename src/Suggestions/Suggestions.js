@@ -13,7 +13,7 @@ export const Suggestions = (props) => {
     return <div className={styles.noResults}>No suggestions yet</div>
   }
   return (
-    <ul className={styles.wrapper}>
+    <ul data-testid="suggestionsList" className={styles.wrapper}>
       {list.map((result, i) => (
         <li onClick={handleClick} className={cx(styles.listRow, {
           [styles.active]: i === active,

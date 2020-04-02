@@ -256,8 +256,6 @@ export class AutocompleteApi extends RestApi {
       .map((c) => c.name)
       .filter((c) => c.toLowerCase().indexOf(text.toLowerCase()) > -1);
 
-    console.log('bbb suggestions', text);
-
     return res;
   };
 }
